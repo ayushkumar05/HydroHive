@@ -1,8 +1,10 @@
 from flask import Flask, request, jsonify
 import sqlite3
 from math import sin, cos, sqrt, atan2, radians
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 
 def calculate_distance(lat1, lon1, lat2, lon2):
     # approximate radius of earth in km
