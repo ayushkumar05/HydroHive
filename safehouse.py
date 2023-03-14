@@ -58,4 +58,4 @@ def find_nearest_safepoint():
     return jsonify(nearest_safepoint)
 
 if __name__ == '__main__':
-    app.run(host="0.0.0.0")
+    app.run(host="0.0.0.0",port=5000)
