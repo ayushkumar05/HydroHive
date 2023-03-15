@@ -1,4 +1,4 @@
-from flask import Flask, render_template, Response,url_for,redirect,jsonify
+from flask import Flask, render_template, Response,url_for,redirect,jsonify,request
 import sqlite3
 from math import sin, cos, sqrt, atan2, radians
 from flask_cors import CORS
