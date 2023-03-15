@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, render_template, Response,url_for,redirect,jsonify
 import sqlite3
 from math import sin, cos, sqrt, atan2, radians
 from flask_cors import CORS
@@ -56,6 +56,11 @@ def find_nearest_safepoint():
 
     # Return the nearest safe point as a JSON response
     return jsonify(nearest_safepoint)
+
+
+@app.route('/')
+def index():
+    return render_template('Index1.html')
 
 if __name__ == '__main__':
     app.run(host="0.0.0.0",port=5000)
