@@ -1,195 +1,35 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-  }
-
-  #navbar {
-    background-color: #333;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  #navbar a {
-    color: white;
-    text-decoration: none;
-    margin: 0 10px;
-    font-size: 18px;
-  }
-
-#globeViz {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 160%;
-    height: 160%;
-    z-index: -1;
-    overflow: hidden;
-    /* zoom: 115%; */
+  background-image: radial-gradient(
+    circle,
+    #000 25vmin,
+    #024 100vmax
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
 }
 
-@media (min-aspect-ratio: 1/1) {
-    #globeViz {
-        height: auto;
-    }
+#output {
+  background-image: radial-gradient(
+    circle farthest-corner at 75% 75%,
+    rgba(0,0,16,1) 0%,
+    rgba(0,16,32,1) 50%,
+    rgba(0,64,48,1) 100%
+  );
+  border-radius: 100%;
+  color: rgb(32, 220, 128);
+  font-family: "Inconsolata", monospace;
+  font-size: 3vmin;
+  line-height: .55em;
+  text-rendering: optimizeSpeed;
+  will-change: contents;
+  white-space: pre;
 }
-
-@media (max-width: 768px) {
-    #globeViz {
-        height: 50vh;
-    }
+canvas {
+  display: none;
 }
-
-  #box {
-    position: absolute;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(255, 255, 255, 0.11);
-    padding: 20px;
-    text-align: center;
-    border-radius: 10px;
-    max-width: 40%;
-    max-height: 40%;
-  }
-
-  #box h1 {
-    margin: 0;
-    font-size: 48px;
-  }
-
-  #box h2 {
-    margin: 10px 0 20px;
-    font-size: 36px;
-  }
-
-  #box p {
-    margin: 0;
-    font-size: 24px;
-  }
-
-  .text {
-    position: relative;
-    z-index: 10;
-  }
-  
-  .text h2 {
-    font-size: 18em;
-    font-weight: 800;
-    color: rgb(28, 193, 222);
-    line-height: 1em;
-    text-transform: uppercase;
-  }
-  .text h3 {
-    font-size: 1em;
-    font-weight: 70;
-    color: #fff;
-    line-height: 1em;
-    text-transform: uppercase;
-  }
-  .text p {
-    font-size: 1.1em;
-    color: #fff;
-    margin: 20px 0;
-    font-weight: 400;
-    max-width: 700px;
-  }
-  .text a {
-    display: inline-block;
-    font-size: 1em;
-    background: #fff;
-    padding: 10px 30px;
-    text-transform: uppercase;
-    text-decoration: none;
-    font-weight: 500;
-    margin-top: 10px;
-    color: #111;
-    letter-spacing: 2px;
-    transition: 0.2s;
-  }
-  .text a:hover {
-    background: rgb(255, 201, 14);
-  }
-  
-  header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    margin: auto;
-    margin-right: auto;
-    /* padding: 40px 0px; */
-    z-index: 1000;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    overflow: hidden;
-  }
-  .nav_links li,
-  a {
-    display: inline-block;
-    padding: 0px 10px;
-    font-family: "Poppins", sans-serif;
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-  }  
-  header .logo {
-    color: #fff;
-    text-transform: uppercase;
-    cursor: pointer;
-    margin-left: 1rem;
-  }
-  .nav_links {
-    list-style: none;
-  }
-
-  div {
-    display:inline-block;
-    overflow:auto;
-    white-space:nowrap;
-  }
-  
-  div:first-of-type {    /* For increasing performance 
-                         ID/Class should've been used. 
-                         For a small demo 
-                         it's okaish for now */
-    animation: showup 7s infinite;
-  }
-  
-  div:last-of-type {
-    width:0px;
-    animation: reveal 7s infinite;
-  }
-  
-  div:last-of-type span {
-    margin-left:-355px;
-    animation: slidein 7s infinite;
-  }
-  
-  @keyframes showup {
-      0% {opacity:0;}
-      20% {opacity:1;}
-      80% {opacity:1;}
-      100% {opacity:0;}
-  }
-  
-  @keyframes slidein {
-      0% { margin-left:-800px; }
-      20% { margin-left:-800px; }
-      35% { margin-left:0px; }
-      100% { margin-left:0px; }
-  }
-  
-  @keyframes reveal {
-      0% {opacity:0;width:0px;}
-      20% {opacity:1;width:0px;}
-      30% {width:355px;}
-      80% {opacity:1;}
-      100% {opacity:0;width:355px;}
-  }
-  
-  
-  
