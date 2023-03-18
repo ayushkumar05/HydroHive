@@ -1,44 +1,54 @@
 <!DOCTYPE html>
-
 <html>
 <head>
-    <style> body { margin: 0; } </style>
-    
-    <script src="//unpkg.com/d3"></script>
-    <script src="//unpkg.com/d3-dsv"></script>
-    <script src="//unpkg.com/globe.gl"></script>
-    <!--<script src="../../dist/globe.gl.js"></script>-->
-    <link rel="stylesheet" href={{ url_for('static', filename='style1.css') }} />
-
+  <script src="//unpkg.com/d3"></script>
+  <script src="//unpkg.com/d3-dsv"></script>
+  <script src="//unpkg.com/globe.gl"></script>
+  <!--<script src="../../dist/globe.gl.js"></script>-->
+  <link rel="stylesheet" href="style.css">
   </head>
   
   <body>
     <div id="globeViz"></div>
-  
-    <script>
-      const weightColor = d3.scaleSequentialSqrt(d3.interpolateYlOrRd)
-        .domain([0, 1e7]);
-  
-        const world = Globe()
-  (document.getElementById('globeViz'))
-  .globeImageUrl('//unpkg.com/three-globe/example/img/earth-night.jpg')
-  .bumpImageUrl('//unpkg.com/three-globe/example/img/earth-topology.png')
-  .backgroundImageUrl('//unpkg.com/three-globe/example/img/night-sky.png')
-  .hexBinPointWeight('pop')
-  .hexAltitude(d => d.sumWeight * 6e-8)
-  .hexBinResolution(4)
-  .hexTopColor(d => weightColor(d.sumWeight))
-  .hexSideColor(d => weightColor(d.sumWeight))
-  .hexBinMerge(true)
-  .enablePointerInteraction(false) // performance improvement
-  .hexAmbientColor('#ffffff')
-  .hexEmissiveColor('#ffbb00')
-  .hexGlowCoefficient(0.1)
-  .hexGlowPower(3);
+    
+    <!-- Header -->
+    <header>  
+      <div class="logo">
+        <p>HydroHive</p>
+      </div>
+      <nav>
+        <li><a href="">About The Project</a></li>
+        <li><a href="">Team Details</a></li>
+        <li><a href="">Feedback</a></li>
+      </nav>
+    </header>
 
 
-        world.controls().autoRotate = true;
-        world.controls().autoRotateSpeed = 0.6;
+
+    <!-- <div class="wrapper">
+      <video autoplay playsinline muted loop preload poster="http://i.imgur.com/xHO6DbC.png">
+      <source src="https://storage.coverr.co/videos/7RzPQrmB00s01rknm8VJnXahEyCy4024IMG?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHBJZCI6Ijg3NjdFMzIzRjlGQzEzN0E4QTAyIiwiaWF0IjoxNjI5MTg2NjA0fQ.M8oElp5VNO8bWEWmdF2nGiu3qDOOYRFfP8wkKvl8I20" />
+      </video>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 285 80" preserveAspectRatio="xMidYMid slice">
+      <defs>
+        <mask id="mask" x="0" y="0" width="100%" height="100%" >
+          <rect x="0" y="0" width="100%" height="100%" />
+          <text x="72" y="10" id="text-main">HydoHive</text>
+        </mask>
+      </defs>
+      <rect id="rectan" x="0" y="0" width="100%" height="100%" />
+    </svg>
+  </div> -->
+
+  <!-- HidroHive container -->
+  <div class="container">
+    <div class="glitch" data-text="HydroHive">HydroHive</div>
+    <div class="glow">HydroHive</div>
+    <!-- <p class="subtitle">IMPRACTICAL DEVELOPER</p> -->
+    </div>
+    <!-- <div class="scanlines"></div> -->
+
+<script src="script.js">
     </script>
   </body>
 </html>
