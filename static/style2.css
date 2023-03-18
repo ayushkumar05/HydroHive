@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Josefin+Sans&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+.flex-container {
+  display: flex;
+  /* flex-direction: column; */
+}
+
+/* LEFT BOX */
+.left-box {
+  width: 25rem;
+  height: 90.7vh;
+  padding: 2rem;
+  background-color: #efefef;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* RIGHT BOX */
+.right-box {
+  width: 65rem;
+  height: 90.7vh;
+  padding: 2rem;
+  background-color: #cacaca;
+}
+
+.search {
+  display: flex;
+  background-color: white;
+  width: 20rem;
+  height: 2rem;
+  padding: 0.3rem;
+  border-radius: 2rem;
+}
+
+.searchTerm {
+  width: 17rem;
+  border-radius: 2rem;
+  border: none;
+}
+
+input:focus {
+  outline: none;
+}
+
+.video {
+  width: 20rem;
+  border: 2px red;
+  margin-top: 2rem;
+}
+
+.temperature {
+  font-size: 3rem;
+  font-family: inter, sans serif;
+}
+
+.superscript {
+  font-size: 1.5rem;
+}
+
+.location {
+  width: 20rem;
+  height: 20rem;
+  border-radius: 2rem;
+  margin-top: 1.5rem;
+  background-image: url(https://wallpaperaccess.com/full/3146655.jpg);
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.dates {
+  font-weight: 600;
+  font-size: 2rem;
+  font-family: inter;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.celcius {
+  font-size: 2rem;
+  padding: 0.5rem;
+  border-radius: 2rem;
+}
+
+.farenheit {
+  font-size: 2rem;
+  padding: 0.5rem;
+  border-radius: 2rem;
+}
+
+.highlights {
+  margin-top: 10rem;
+  font-weight: 600;
+  font-size: 3rem;
+  padding: 2rem 0rem;
+}
+
+.box-1 {
+  background-color: white;
+  width: 13rem;
+  height: 6rem;
+  border-radius: 0.9rem;
+  padding: 0.5rem;
+}
+
+.lane {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 2rem;
+  color: rgb(123, 123, 123);
+  font-weight: 600;
+}
