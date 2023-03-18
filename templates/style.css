@@ -4,7 +4,7 @@ body {
   font-style: italic;
   margin: 0;
   overflow-y:hidden;
-  
+  user-select: none;
   height:100%;
   width: 100%;
 }
@@ -25,11 +25,25 @@ top: 0.1%;
   font-size: 30px;
   font-weight: bold;
   color: #fff;
-  letter-spacing: 1.5px;
+  letter-spacing: 2.5px;
   cursor: pointer;
-  font-family:'blowbrush';
+  font-family:'Poppins';
+  transition: 0.5s ease-in-out;
+  
 }
 
+.logo:hover{
+  transform: scale(1.2);
+  
+}
+
+.logo > p{
+  transition: 0.5s ease-in-out;
+
+}
+.logo > p:hover{
+  text-shadow: 4px 4px rgb(22, 45, 105);
+}
 nav li{
   display: inline-block;
   list-style: none;

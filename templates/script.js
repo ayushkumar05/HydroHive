@@ -20,4 +20,4 @@ const weightColor = d3.scaleSequentialSqrt(d3.interpolateYlOrRd)
   
       // Add auto-rotation
       world.controls().autoRotate = true;
-      world.controls().autoRotateSpeed = 0.6;
+      world.controls().autoRotateSpeed = 0.8;
