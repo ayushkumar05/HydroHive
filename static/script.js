@@ -14,9 +14,9 @@ const weightColor = d3.scaleSequentialSqrt(d3.interpolateYlOrRd)
         .hexBinMerge(true)
         .enablePointerInteraction(false); // performance improvement
   
-      fetch('../datasets/world_population.csv').then(res => res.text())
-        .then(csv => d3.csvParse(csv, ({ lat, lng, pop }) => ({ lat: +lat, lng: +lng, pop: +pop })))
-        .then(data => world.hexBinPointsData(data));
+      // fetch('../datasets/world_population.csv').then(res => res.text())
+      //   .then(csv => d3.csvParse(csv, ({ lat, lng, pop }) => ({ lat: +lat, lng: +lng, pop: +pop })))
+      //   .then(data => world.hexBinPointsData(data));
   
       // Add auto-rotation
       world.controls().autoRotate = true;

@@ -66,5 +66,11 @@ def index():
 def place():
     return render_template('place.html')
 
+@app.route('/live-status')
+def live():
+    return render_template('live-status.html')
+
+
+
 if __name__ == '__main__':
-    app.run(host="0.0.0.0",port=5000)
+    app.run(host="0.0.0.0",port=5001)
