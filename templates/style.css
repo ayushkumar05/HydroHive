@@ -28,7 +28,8 @@ top: 0.1%;
   letter-spacing: 2.5px;
   cursor: pointer;
   font-family:'Poppins';
-  transition: 0.5s ease-in-out;
+  /* font: 'Open Sans', arial, sans-serif; */
+  transition: 0.2s ease-in-out;
   
 }
 
@@ -38,25 +39,51 @@ top: 0.1%;
 }
 
 .logo > p{
-  transition: 0.5s ease-in-out;
+  transition: 0.2s ease-in-out;
 
 }
 .logo > p:hover{
   text-shadow: 4px 4px rgb(22, 45, 105);
 }
-nav li{
+nav >ul>li{
   display: inline-block;
   list-style: none;
-  padding: 0px 20px;
+  padding: 0px 22px;
 }
 
-nav > a{
+nav > ul > li > a{
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 550;
   color: #fff !important;
-  
+  letter-spacing: 1.6px;
   text-decoration: none !important;
   cursor: pointer;
+  font-family: 'Open Sans', arial, sans-serif;
+  transition: 0.2 ease-in-out;
+  display: inline-block;
+  position: relative;
+}
+
+
+nav > ul > li > a::after{
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  top: 100%;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #fff;
+  transition: width 0.8s ease 0s, left 0.8s ease 0s;
+  width: 0;
+}
+
+nav > ul > li > a:hover:after{
+transform: scale(1.2);
+width: 80%; 
+left: 10%; 
+/* left ne 0 for full sexx */
 }
 
 .container {
