@@ -62,5 +62,9 @@ def find_nearest_safepoint():
 def index():
     return render_template('Index1.html')
 
+@app.route('/place')
+def place():
+    return render_template('place.html')
+
 if __name__ == '__main__':
-    app.run(host="0.0.0.0",port=5001)
+    app.run(host="0.0.0.0",port=5000)
