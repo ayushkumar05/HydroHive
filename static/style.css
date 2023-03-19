@@ -76,6 +76,7 @@ nav > ul > li > a::after{
   position: absolute;
   background: #fff;
   transition: width 0.8s ease 0s, left 0.8s ease 0s;
+  /* AYUSH MC */
   width: 0;
 }
 
