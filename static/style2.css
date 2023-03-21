@@ -4,7 +4,7 @@
   padding: 0;
 }
 .flex-container {
-  display: flex;
+  display:grid;
   /* flex-direction: column; */
 }
 
@@ -89,12 +89,15 @@ input:focus {
   font-size: 2rem;
   padding: 0.5rem;
   border-radius: 2rem;
+  cursor: pointer; 
 }
 
 .farenheit {
   font-size: 2rem;
   padding: 0.5rem;
   border-radius: 2rem;
+  cursor: pointer; 
+
 }
 
 .highlights {
@@ -102,6 +105,7 @@ input:focus {
   font-weight: 600;
   font-size: 3rem;
   padding: 2rem 0rem;
+  display: inline-block !important;
 }
 
 .box-1 {

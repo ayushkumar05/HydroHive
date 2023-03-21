@@ -5,8 +5,8 @@
   <script src="//unpkg.com/d3-dsv"></script>
   <script src="//unpkg.com/globe.gl"></script>
   <!--<script src="../../dist/globe.gl.js"></script>-->
-  <link rel="stylesheet" href={{ url_for('static', filename='style.css') }} />
-  <!-- <link rel="stylesheet" href="style.css"> -->
+  <!-- <link rel="stylesheet" href={{ url_for('static', filename='style.css') }} /> -->
+  <link rel="stylesheet" href="/static/style.css">
   </head>
 
   <body>
@@ -45,17 +45,34 @@
     <div class="container">
       <div class="glitch" data-text="HydroHive">HydroHive</div>
       <div class="glow">HydroHive</div>
+
       <!-- <p class="subtitle">IMPRACTICAL DEVELOPER</p> -->
+
+      <!-- <h1 data-value="HydroHive">HydroHive</h1> -->
+
     </div>
 
     <!-- <div class="scanlines"></div> -->
+    
+    <!-- <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<lottie-player src="https://assets2.lottiefiles.com/packages/lf20_JMhjmh.json" mode="bounce" background="#FFFFFF"  speed="1.5"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player> -->
 
-    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-<lottie-player src="https://assets2.lottiefiles.com/packages/lf20_JMhjmh.json" mode="bounce" background="transparent"  speed="1.5"  style="width: 300px; height: 300px;"  loop controls autoplay></lottie-player>
+<!-- Mosue Scroll -->
+<div class="mouse_scroll">
+
+  <div class="mouse">
+    <div class="wheel"></div>
+  </div>
+  <div class="down-arrow">
+    <span class="m_scroll_arrows unu"></span>
+    <span class="m_scroll_arrows doi"></span>
+    <!-- <span class="m_scroll_arrows trei"></span> -->
+  </div>
+</div>
 
 
-<script src="script.js">
-    </script>
-  <script src={{ url_for('static', filename='script.js') }}></script>
+<script src="/static/script.js"></script>
+
+  <!-- <script src={{ url_for('static', filename='script.js') }}></script> -->
   </body>
 </html>

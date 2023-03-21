@@ -4,8 +4,15 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href={{ url_for('static', filename='style2.css') }} />
+    <title>The Next Page</title>
+    <!-- <link rel="stylesheet" href={{url_for('static', filename='style2.css')}} /> -->
+
+    <!-- MAIN -->
+  <!-- <link rel="stylesheet" href={{ url_for('static', filename='style2.css') }} /> -->
+
+  <!-- MASTI -->
+  <link rel="stylesheet" href="/static/style2.css">
+
   </head>
   <body>
     <div class="flex-container">
@@ -14,17 +21,18 @@
       <div class="left-box">
         <!-- SEARCH BAR -->
         <div class="search">
-          <img src="/WhatsApp Image 2023-03-18 at 21.43.08.jpg" alt="" />
+          <!-- <img src="/WhatsApp Image 2023-03-18 at 21.43.08.jpg" alt="" /> -->
           <input
             type="text"
             class="searchTerm"
             placeholder="Search for places..."
           />
-          <img src="/WhatsApp Image 2023-03-18 at 21.43.081.jpg" alt="" />
+          <!-- <img src="/WhatsApp Image 2023-03-18 at 21.43.081.jpg" alt="" /> -->
         </div>
 
         <!-- EARTH GIF -->
         <img class="video" src={{ url_for('static', filename='abc.gif') }}></img>
+        
         <!-- TEMPERATURE  -->
         <div class="temp">
             
@@ -74,34 +82,35 @@
         <!-- TODAYS HIGHLIGHTS -->
         <div class="highlights">Today's Highlights</div>
         <!-- BOX1 -->
-        <div class="lane">
-        <div class="box-1">
-            <div>UV Index</div>
-        </div>
-        <!-- BOX2 -->
-        <div class="box-1">
-            <div>Wind Status</div>
-        </div>
-        <!-- BOX3 -->
-        <div class="box-1">
-            <div>UV Index</div>
-        </div>
+        <!-- <div class="lane">
+          <div class="box-1">
+              <div>UV Index</div>
+          </div> -->
+          <!-- BOX2 -->
+          <!-- <div class="box-1">
+              <div>Wind Status</div>
+          </div> -->
+          <!-- BOX3 -->
+          <!-- <div class="box-1">
+              <div>UV Index</div>
+          </div>
+        </div> -->
     </div>
 
-    <div class="lane">
+    <!-- <div class="lane"> -->
         <!-- BOX4 -->
-        <div class="box-1">
+        <!-- <div class="box-1">
             <div>UV Index</div>
-        </div>
+        </div> -->
         <!-- BOX5 -->
-        <div class="box-1">
+        <!-- <div class="box-1">
             <div>UV Index</div>
-        </div>
+        </div> -->
         <!-- BOX6 -->
-        <div class="box-1">
-            <div>UV Index</div>
+        <!-- <div class="box-1"> -->
+            <!-- <div>UV Index</div>
         </div>
-    </div>
+    </div> -->
       </div>
     </div>
   </body>
