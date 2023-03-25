@@ -64,7 +64,7 @@ def index():
 
 @app.route('/place')
 def place():
-    return render_template('place.html')
+    return render_template('place2.html')
 
 @app.route('/live-status')
 def live():

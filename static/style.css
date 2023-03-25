@@ -153,6 +153,7 @@ h1:hover {
 
 .unu, .doi, .trei
 {
+  top: 70%;
     -webkit-animation: mouse-scroll 1s infinite;
     -moz-animation: mouse-scroll 1s infinite;
     animation: mouse-scroll 1s infinite;
@@ -208,7 +209,6 @@ h1:hover {
 .mouse_scroll{
   position: absolute;
   left: 95%;
-  top: 75%;
 }
 
 

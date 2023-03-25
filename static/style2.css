@@ -14,7 +14,7 @@
   height: 90.7vh;
   padding: 2rem;
   background-color: #efefef;
-  display: flex;
+  /* display: flex; */
   flex-direction: column;
   align-items: center;
 }
@@ -76,7 +76,7 @@ input:focus {
 
 .dates {
   font-weight: 600;
-  font-size: 2rem;
+  font-size: 1rem;
   font-family: inter;
 }
 

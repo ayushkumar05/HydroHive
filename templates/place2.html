@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Places</title>
+
+    <link rel="stylesheet" href="/static/style3.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row no-gutters h-100">
+        <div class="col-lg-3 col1 h-100" id="section">
+          <!-- SEARCH -->
+          <div class="search" id="search-bar">
+            <input type="text" placeholder="Text Here" id="input-bar" />
+          </div>
+          <div class="globe-sm">
+            <img src="/static/abc.gif" alt="globe" width="80%" />
+          </div>
+          <div class="temp">
+            <b
+              ><label class="temperature"
+                >12 <sup class="superscript"><sup>o</sup>C</sup></label
+              ></b
+            >
+          </div>
+          <!-- DAY TIME -->
+          <div class="day">
+            <b><label class="day">Saturday, 19:00</label></b>
+          </div>
+          <hr />
+          <!-- WIND -->
+          <div class="wind">
+            <b><label class="wind">Windy</label></b>
+          </div>
+          <!-- RAIN -->
+          <div class="rain">
+            <b><label class="rain">Rain, 20%</label></b>
+          </div>
+          <!-- LOCATION -->
+          <div class="location-card">
+            <div class="location">
+              <b><label class="location-place">Kerela, India</label></b>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-9 col2 h-100" id="section">
+         
+         <!-- TOPBAR of the second box -->
+          <div class="topbar">
+            <div class="dates">
+              <label>FROM</label>
+              <input name="start-date" type="date" />
+              <label>TO</label>
+              <input name="end-date" type="date" />
+            </div>
+            <!-- CELCIUS FARENHEIT -->
+            <div class="buttons">
+              <button class="celcius"><sup>o</sup>C</button>
+              <button class="farenheit"><sup>o</sup>F</button>
+            </div>
+          </div>
+        
+        
+        </div>
+      </div>
+    </div>
+
+    <!-- <h1>Search BAr</h1>
+
+      <div class="search-container">
+        <form action="#">
+          <input type="text" placeholder="Enter Here" name="search">
+          <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+      </div> -->
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
