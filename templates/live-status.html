@@ -36,9 +36,64 @@ function success(pos){
   const lng = pos.coords.longitude;
   const accuracy = pos.coords.accuracy;
 
-  let marker=L.marker([lat,lng]).addTo(map);
-  let circle=L.circle([lat,lng],{radius:accuracy}).addTo(map);
-  map.fitBounds(cicle.getBounds());
+  var markers = [
+    {
+        latlng: [51.505, -0.09],
+        title: "Marker 1",
+        icon: L.icon({
+            iconUrl: 'marker-icon.png',
+            iconSize: [25, 41],
+            iconAnchor: [12, 41],
+            popupAnchor: [0, -35]
+        })
+    },
+    {
+        latlng: [51.495, -0.075],
+        title: "Marker 2",
+        icon: L.icon({
+            iconUrl: 'marker-icon.png',
+            iconSize: [25, 41],
+            iconAnchor: [12, 41],
+            popupAnchor: [0, -35]
+        })
+    },
+  ]
+markers.forEach(function(marker) {
+    L.marker(marker.latlng, { icon: marker.icon })
+        .bindPopup(marker.title)
+        .addTo(map);
+});
+markers.addTo(map);
+
+
+var markers = [   {       latlng: [51.505, -0.09],
+       title: "Marker 1",
+       icon: L.icon({
+           iconUrl: 'marker-icon.png',
+           iconSize: [25, 41],
+           iconAnchor: [12, 41],
+           popupAnchor: [0, -35]
+       })
+   },
+   {
+       latlng: [51.495, -0.075],
+       title: "Marker 2",
+       icon: L.icon({
+           iconUrl: 'marker-icon.png',
+           iconSize: [25, 41],
+           iconAnchor: [12, 41],
+           popupAnchor: [0, -35]
+       })
+   },
+];
+
+markers.forEach(function(marker) {
+   L.marker(marker.latlng, { icon: marker.icon })
+       .bindPopup(marker.title)
+       .addTo(map);
+});
+
+
 } 
 function error(err){
   if(err.code ==1) {
