@@ -10,6 +10,18 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
 
     <style>
+        .logo{
+  font-size: 30px;
+  font-weight: bold;
+  color: #fff;
+  letter-spacing: 2.5px;
+  cursor: pointer;
+  font-family:'Poppins';
+  /* font: 'Open Sans', arial, sans-serif; */
+  transition: 0.2s ease-in-out;
+  z-index: 3;
+  
+}
         body {
             margin: 0;
             padding: 0;
@@ -23,7 +35,9 @@
         .coordinate {
             position: absolute;
             bottom: 10px;
-            right: 50%;
+            font-size: 1.5em;
+            font-weight: bold;
+            right: 2%;
         }
 
         .leaflet-popup-content-wrapper {
@@ -32,11 +46,27 @@
             border: 1px solid red;
             border-radius: 0px;
         }
+        .leaflet-control-attribution{
+            visibility: hidden;
+        }
     </style>
 </head>
 
 <body>
+    
     <div id="map">
+        <header>
+            <div class="logo">
+              <p>HydroHive</p>
+            </div>
+            <nav>
+              <ul>
+                <li><a href="">About The Project</a></li>
+                <li><a href="">Team Details</a></li>
+                <li><a href="">Feedback</a></li>
+              </ul>
+            </nav>
+          </header>
         <div class="leaflet-control coordinate"></div>
     </div>
 </body>
@@ -52,7 +82,7 @@
 
 <script>
     // Map initialization 
-    var map = L.map('map').setView([25.3949, 84.1240], 8);
+    var map = L.map('map').setView([25.3949, 84.1241], 8);
 
 
 
@@ -169,8 +199,8 @@
     })
 
     map.on('mousemove', function (e) {
-        document.getElementsByClassName('coordinate')[0].innerHTML = 'lat: ' + e.latlng.lat + 'lng: ' + e.latlng.lng;
-        console.log('lat: ' + e.latlng.lat, 'lng: ' + e.latlng.lng)
+        document.getElementsByClassName('coordinate')[0].innerHTML = 'lat: ' +e.latlng.lat + '&nbsp;&nbsp;&nbsp;&nbsp;' + 'long: ' + e.latlng.lng;
+        console.log('lat: ' + e.latlng.lat, 'long: ' + e.latlng.lng)
     })
 
 

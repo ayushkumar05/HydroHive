@@ -2,8 +2,14 @@ const weightColor = d3
   .scaleSequentialSqrt(d3.interpolateYlOrRd)
   .domain([0, 1e7]);
 
+// const light = new THREE.AmbietLight(0xfffff,0.5);
+// hehe = document.getElementById("globeViz");
+// hehe.scene.add(light);
+
 const world = Globe()(document.getElementById("globeViz"))
   .globeImageUrl("//unpkg.com/three-globe/example/img/earth-night.jpg")
+  // .globeImageUrl("https://unpkg.com/three-globe@2.25.4/example/img/earth-day.jpg")
+  // .globeImageUrl("//flatplanet.sourceforge.net/maps/images/land_ocean_ice_lights_2048.jpg")
   .bumpImageUrl("//unpkg.com/three-globe/example/img/earth-topology.png")
   .backgroundImageUrl("//unpkg.com/three-globe/example/img/night-sky.png")
   .hexBinPointWeight("pop")
@@ -12,7 +18,7 @@ const world = Globe()(document.getElementById("globeViz"))
   .hexTopColor((d) => weightColor(d.sumWeight))
   .hexSideColor((d) => weightColor(d.sumWeight))
   .hexBinMerge(true)
-  .enablePointerInteraction(false); // performance improvement
+  .enablePointerInteraction(true); // performance improvement
 
 fetch("../datasets/world_population.csv")
   .then((res) => res.text())
