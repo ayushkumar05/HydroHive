@@ -13,7 +13,7 @@ const world = Globe()(document.getElementById("globeViz"))
   .hexSideColor((d) => weightColor(d.sumWeight))
   .hexBinMerge(true)
   .enablePointerInteraction(false); // performance improvement
-
+4
 fetch("../datasets/world_population.csv")
   .then((res) => res.text())
   .then((csv) =>

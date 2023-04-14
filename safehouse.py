@@ -57,6 +57,10 @@ def find_nearest_safepoint():
     # Return the nearest safe point as a JSON response
     return jsonify(nearest_safepoint)
 
+@app.route('/dummy')
+def dummydata():
+    return 'madhubani'
+
 
 @app.route('/')
 def index():
